@@ -203,6 +203,7 @@ async function Givemeaning() {
       source_line.style.border = "none";
       source_line.style.borderTop = "1px solid gray";
       source_line.style.width = "auto";
+      source_line.style.display="block"
       let source = document.getElementById("source");
       let sources = datainside.sourceUrls;
       let source_heading = document.getElementById("source-heading");
