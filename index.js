@@ -1,5 +1,10 @@
 let inpword = document.getElementById("inpword");
 let searchwords = inpword.value;
+input.addEventListener("keyup", function (e) {
+    if(e.key==="Enter"){
+      DisplayWord();
+    }
+  });
 // console.log(inpword.value);
 let icon_search = document.getElementById("icon-search");
 icon_search.addEventListener("click", function (e) {
