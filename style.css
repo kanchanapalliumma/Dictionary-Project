@@ -349,14 +349,23 @@ label.active {
   font-size: 35px;
   /* color: white; */
 }
-/* @media (max-width: 640px) {
+@media (max-width: 640px) {
   .div-container {
     width: 80vh;
   }
   input {
     width: 80vh;
   }
-} */
+}
+@media (max-width: 500px) {
+  .div-container {
+    width: 80vh;
+    margin-left: -60px;
+  }
+  input {
+    width: 80vh;
+  }
+}
 
 @media (max-width: 480px) {
   body {
