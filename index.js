@@ -327,9 +327,16 @@ mode.addEventListener("click", function () {
     div_container.style.backgroundColor = "black";
   } else {
     let div_container = document.getElementsByClassName("div-container")[0];
-    div_container.style.backgroundColor = "black";
+    div_container.style.backgroundColor = "white";
+    // let meaning_section = datainside.meanings;
+    // for (i = 0; i < meaning_section.length; i++) {
+    // partsOfSpeech.innerHTML = meaning_section[i].partOfSpeech;
+    let partsOfSpeech = document.getElementsByClassName("partsofspeech-word");
+    partsOfSpeech.style.color = "white";
+    // }
     // div_container.style.backgroundColor =
   }
+
   // div_container.style.backgroundColor = "rgb(255, 206, 213)";
 });
 
@@ -391,31 +398,34 @@ font_selection.addEventListener("change", function () {
 
 const content_one = document.getElementsByTagName("body")[0];
 const mode_one = document.getElementById("mode");
-mode_one.addEventListener("change", function () {
-  mode_one.classList.toggle("label");
-  content.classList.toggle("night");
-  let moon = document.getElementById("moon");
-  moon.style.color = "grey";
-  moon.classList.toggle("moon");
-  let input = document.getElementsByTagName("input")[0];
-  input.style.color = "white";
-  input.style.backgroundColor = "rgb(93, 91, 91)";
-  let word = document.getElementById("word");
-  word.style.color = "white";
-  let font_selection = document.getElementById("font-selection");
-  font_selection.style.color = "black";
-  font_selection.style.backgroundColor = "white";
-  let informMesssage = document.getElementById("informMessage");
-  if (
-    informMesssage.innerText ==
-    `We can't find the meaning of "${inpword.value}"`
-  ) {
-    let div_container = document.getElementsByClassName("div-container")[0];
-    div_container.style.backgroundColor = "rgb(255, 206, 213)";
-  } else {
-    let div_container = document.getElementsByClassName("div-container")[0];
-    div_container.style.backgroundColor = "white";
-    // div_container.style.backgroundColor =
+mode_one.addEventListener("click", function () {
+  const isDarkMode = mode_one.classList.contains("active");
+  if (isDarkMode) {
+    // mode_one.classList.toggle("label");
+    // content.classList.toggle("night");
+    let moon = document.getElementById("moon");
+    moon.style.color = "black";
+    moon.classList.toggle("moon");
+    let input = document.getElementsByTagName("input")[0];
+    input.style.color = "black";
+    input.style.backgroundColor = "rgb(234, 237, 237);";
+    let word = document.getElementById("word");
+    word.style.color = "black";
+    let font_selection = document.getElementById("font-selection");
+    font_selection.style.color = "white";
+    font_selection.style.backgroundColor = "black";
+    let informMesssage = document.getElementById("informMessage");
+    if (
+      informMesssage.innerText ==
+      `We can't find the meaning of "${inpword.value}"`
+    ) {
+      let div_container = document.getElementsByClassName("div-container")[0];
+      div_container.style.backgroundColor = "rgb(255, 206, 213)";
+    } else {
+      let div_container = document.getElementsByClassName("div-container")[0];
+      div_container.style.backgroundColor = "black";
+      // div_container.style.backgroundColor =
+    }
   }
-  // div_container.style.backgroundColor = "rgb(255, 206, 213)";
+  //   // div_container.style.backgroundColor = "rgb(255, 206, 213)";
 });
