@@ -408,7 +408,7 @@ mode_one.addEventListener("click", function () {
     moon.style.color = "black";
     moon.classList.toggle("moon");
     let input = document.getElementsByTagName("input")[0];
-    input.style.color = "black";
+    // input.style.color = "black";
     input.style.backgroundColor = "rgb(234, 237, 237);";
     let word = document.getElementById("word");
     word.style.color = "black";
