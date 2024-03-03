@@ -13,7 +13,6 @@ icon_search.addEventListener("click", function (e) {
 
 let audio;
 async function Givemeaning() {
-  let div_container = document.getElementsByClassName("div-container")[0];
   fetchurl = `https://api.dictionaryapi.dev/api/v2/entries/en/${inpword.value}`;
   let loading = document.getElementById("loading");
   loading.style.display = "block";
@@ -200,6 +199,19 @@ async function Givemeaning() {
       informMesssage.innerText = `We can't find the meaning of "${inpword.value}"`;
       informMesssage.style.backgroundColor = "rgb(234, 237, 237)";
       informMesssage.style.width = "10px 5px";
+      const mode = document.getElementById("mode");
+      const isDarkMode = mode.classList.contains("active");
+      if (isDarkMode) {
+        let div_container = document.getElementsByClassName("div-container")[0];
+        div_container.style.backgroundColor = "black";
+        let partsOfSpeech =
+          document.getElementsByClassName("partsofspeech-word");
+        for (i = 0; i < partsOfSpeech.length; i++) {
+          partsOfSpeech[i].style.color = "white";
+          console.log(partsOfSpeech);
+        }
+        informMesssage.style.backgroundColor = "black";
+      }
       console.log(error);
     });
 }
@@ -227,6 +239,11 @@ function DisplayWord() {
     audio_icon.style.display = "none";
     let source_line = document.getElementsByClassName("source-line")[0];
     source_line.style.display = "none";
+    const mode = document.getElementById("mode");
+      const isDarkMode = mode.classList.contains("active");
+      if (isDarkMode) {
+        informMesssage.style.backgroundColor = "black";
+      }
     return false;
   } else {
     informMesssage.innerText = "";
@@ -247,6 +264,11 @@ function DisplayWord() {
       source_heading.style.display = "none";
       let audio_icon = document.getElementById("audio");
       audio_icon.style.display = "none";
+      const mode = document.getElementById("mode");
+      const isDarkMode = mode.classList.contains("active");
+      if (isDarkMode) {
+        informMesssage.style.backgroundColor = "black";
+      }
       return false;
     } else {
       informMesssage.innerText = "";
@@ -297,20 +319,11 @@ mode.addEventListener("click", function () {
   font_selection.style.backgroundColor = "black";
   let informMesssage = document.getElementById("informMessage");
   informMesssage.style.backgroundColor = "black";
-  if (
-    informMesssage.innerText ==
-    `We can't find the meaning of "${inpword.value}"`
-  ) {
-    let div_container = document.getElementsByClassName("div-container")[0];
-    div_container.style.backgroundColor = "black";
-  } else {
-    let div_container = document.getElementsByClassName("div-container")[0];
-    div_container.style.backgroundColor = "black";
-    let partsOfSpeech = document.getElementsByClassName("partsofspeech-word");
-    for (i = 0; i < partsOfSpeech.length; i++) {
-      partsOfSpeech[i].style.color = "white";
-    }
+  let partsOfSpeech = document.getElementsByClassName("partsofspeech-word");
+  for (i = 0; i < partsOfSpeech.length; i++) {
+    partsOfSpeech[i].style.color = "white";
   }
+  // }
   let div_container = document.getElementsByClassName("div-container")[0];
   div_container.style.backgroundColor = "black";
 });
