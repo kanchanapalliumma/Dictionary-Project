@@ -10,15 +10,14 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
   </head>
   <body>
 
     <div class="container">
       <div class="div-container">
         <div class="header">
-        <i class="fa-solid fa-book" id="book"></i>
-        <div class="header-Div">
+          <i class="fa-solid fa-book" id="book"></i>
+          <div class="header-Div">
             <div class="fonts-div">
               <select id="font-selection">
                 <option value="sarif" >Serif</option>
@@ -26,58 +25,38 @@
                 <option value="Cursive">Cursive</option>
                 <option value="Fantasy">Fantasy</option>
                 <option value="Arial" id="arial">Arial</option>
-                <!-- <option value="Times New Roman">Times New Roman</option>     -->
+                <!-- <option value="" -->
                 <option value="Tahoma" id="tahoma">Tahoma</option>
               </select>
             </div>
-          <hr>
-          <div class="dark-mode">
-            <!-- <label  id="mode"></label> -->
-            <!-- <div class="darkone"> -->
+            <hr>
+            <div class="dark-mode">
               <i class="fa-regular fa-moon"  id="moon"></i>
-            <label  id="mode"></label>
-            <!-- </div> -->
+              <label  id="mode"></label>
+            </div>
           </div>
-        </div>
         </div>
         <div class="container-search">
             <input type="text" placeholder="Search" id="inpword"/>
             <i class="fa-solid fa-magnifying-glass" id="icon-search"></i>
         </div>
         <div class="main-div">
-        <!-- <button id="btn">Search</button> -->
-        <div class="word-heading">
-            <h1 id="word"></h1>
-            <!-- <i class="fa-regular fa-circle-play" id="audio"></i> -->
-            <i class="fa-solid fa-circle-play" id="audio"></i>
-
-        </div>
-        <p id="phonetic-word"></p>
-        <p></p>
-        <div class="partsofspeech-section">
-        </div>
-        <div class="meaning">
-          <h3 id="meaning-heading"></h3>
-          <ul></ul>
-        <div class="synonym-div">
-          <h3 id="synonym-heading"></h3>
-          <p id="synonym"></p>
-        </div>
-        <div class="verb-line">
-          <h4></h4>
-          <!-- <hr /> -->
-        </div>
-        <hr class="source-line"> 
-        <div class="source-div">
-            <h5 id="source-heading">Source</h5>
-            <a  href="#" id="source"></a>
-        </div>
+          <div class="word-heading">
+              <h1 id="word"></h1>
+              <i class="fa-solid fa-circle-play" id="audio"></i>
+          </div>
+          <p id="phonetic-word"></p>
+          <div class="partsofspeech-section"></div>
+          <hr class="source-line"> 
+          <div class="source-div">
+              <h5 id="source-heading">Source</h5>
+              <a  href="#" id="source"></a>
+          </div>
         </div>
         <p id="informMessage"></p>
         <div class="loading-div">
           <i class="fas fa-circle-notch fa-spin" id="loading"></i>
           <p id="loading-message">Searching</p>
-        </div>
         </div>
       </div>
     </div>
