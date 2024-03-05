@@ -15,7 +15,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   min-width: 100vh;
-  align-items: center;
+  /* align-items: center; */
   margin: auto;
 }
 
@@ -24,6 +24,12 @@ body {
   height: auto;
   padding: 10px 1px;
   padding-bottom: 20px;
+}
+#heading {
+  margin-bottom: 70px;
+  color: rgb(35, 157, 157);
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
 }
 
 input {
@@ -55,8 +61,8 @@ input {
 
 #icon-search {
   position: absolute;
-  left: 93%;
   bottom: 17.5px;
+  right: 25px;
 }
 
 h1 {
@@ -119,7 +125,6 @@ label.active {
   padding-top: 40px;
   height: auto;
 }
-
 
 /* HEADER SECTION */
 .header-Div {
@@ -259,7 +264,6 @@ label.active {
 .synonym-section {
   display: flex;
 }
-
 .hr-line {
   margin-top: 13px;
   color: rgb(172, 166, 166);
@@ -305,6 +309,7 @@ label.active {
 .header {
   display: flex;
   justify-content: space-between;
+  /* margin-top: 30px; */
 }
 
 #book {
@@ -321,7 +326,6 @@ label.active {
   }
 }
 
-
 @media (max-width: 500px) {
   .div-container {
     width: 80vh;
@@ -331,7 +335,6 @@ label.active {
     width: 80vh;
   }
 }
-
 
 @media (max-width: 480px) {
   body {

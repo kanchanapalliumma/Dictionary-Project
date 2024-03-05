@@ -39,7 +39,7 @@ async function Givemeaning() {
     .then((response) => response.json())
     .then((data) => {
       let datainside = data[0];
-      console.log(data[0]);
+      console.log(data);
       let informMesssage = document.getElementById("informMessage");
       informMesssage.innerText = "";
       let div_container = document.getElementsByClassName("div-container")[0];
@@ -240,10 +240,10 @@ function DisplayWord() {
     let source_line = document.getElementsByClassName("source-line")[0];
     source_line.style.display = "none";
     const mode = document.getElementById("mode");
-      const isDarkMode = mode.classList.contains("active");
-      if (isDarkMode) {
-        informMesssage.style.backgroundColor = "black";
-      }
+    const isDarkMode = mode.classList.contains("active");
+    if (isDarkMode) {
+      informMesssage.style.backgroundColor = "black";
+    }
     return false;
   } else {
     informMesssage.innerText = "";
